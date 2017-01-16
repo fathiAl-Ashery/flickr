@@ -34,4 +34,5 @@ ext {
     guavaVersion = '18.0'
     espressoVersion = '2.2.2'
     retrofitVersion = '2.0.2'
+    picassoVersion ='2.5.2'
 }

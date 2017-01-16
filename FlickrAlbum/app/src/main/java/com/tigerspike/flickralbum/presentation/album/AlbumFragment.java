@@ -64,11 +64,14 @@ public class AlbumFragment extends Fragment implements AlbumContract.View {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_album, container, false);
 
-        int rowCount = 2;
+        int rowCount = 1;
         DisplayMetrics metrics = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
-        if (metrics.densityDpi >= DisplayMetrics.DENSITY_HIGH || TigerSpikeAlbum.isTablet(getActivity()))
+        if (metrics.densityDpi >= DisplayMetrics.DENSITY_HIGH ) {
+            rowCount = 2;
+        } else if (TigerSpikeAlbum.isTablet(getActivity())) {
             rowCount = 3;
+        }
 
         // Set the adapter
         if (view instanceof RecyclerView) {
