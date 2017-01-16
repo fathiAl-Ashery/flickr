@@ -2,12 +2,10 @@ package com.tigerspike.flickralbum.domain.Images;
 
 import android.support.annotation.NonNull;
 
-import com.tigerspike.flickralbum.data.ImagesDataSource;
-import com.tigerspike.flickralbum.data.ImagesRepository;
-import com.tigerspike.flickralbum.data.model.Image;
+import com.tigerspike.flickralbum.data.AlbumDataSource;
+import com.tigerspike.flickralbum.data.AlbumRepository;
 import com.tigerspike.flickralbum.domain.UseCase;
-
-import java.util.List;
+import com.tigerspike.flickralbum.domain.model.Album;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
@@ -17,21 +15,21 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 public class GetImages extends UseCase<GetImages.RequestValues, GetImages.ResponseValue> {
 
-    private final ImagesRepository mImagesRepository;
+    private final AlbumRepository mImagesRepository;
 
-    public GetImages(@NonNull ImagesRepository imagesRepository) {
+    public GetImages(@NonNull AlbumRepository imagesRepository) {
         mImagesRepository = checkNotNull(imagesRepository, "imagesRepository cannot be null!");
     }
 
     @Override
     protected void executeUseCase(final RequestValues values) {
         if (values.isForceUpdate()) {
-            mImagesRepository.refreshImages();
+            mImagesRepository.refreshAlbum();
         }
 
-        mImagesRepository.getImages(new ImagesDataSource.LoadImagesCallback() {
+        mImagesRepository.getAlbum(new AlbumDataSource.LoadAlbumCallback() {
             @Override
-            public void onImagesLoaded(List<Image> images) {
+            public void onAlbumLoaded(Album images) {
 
                 ResponseValue responseValue = new ResponseValue(images);
                 getUseCaseCallback().onSuccess(responseValue);
@@ -61,13 +59,13 @@ public class GetImages extends UseCase<GetImages.RequestValues, GetImages.Respon
 
     public static final class ResponseValue implements UseCase.ResponseValue {
 
-        private final List<Image> mImages;
+        private final Album mImages;
 
-        public ResponseValue(@NonNull List<Image> images) {
-            mImages = checkNotNull(images, "images cannot be null!");
+        public ResponseValue(@NonNull Album album) {
+            mImages = checkNotNull(album, "images cannot be null!");
         }
 
-        public List<Image> getImages() {
+        public Album getImages() {
             return mImages;
         }
     }
