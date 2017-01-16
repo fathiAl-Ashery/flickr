@@ -17,12 +17,12 @@ import java.util.List;
 public class ImagesAlbumRecyclerViewAdapter extends RecyclerView.Adapter<ImagesAlbumRecyclerViewAdapter.ViewHolder> {
 
     private List<Image> items;
-    private AlbumFragment.AlbumItemListener mListener;
+    private AlbumFragment.AlbumItemListener itemsClickListener;
     private Context context;
 
     public ImagesAlbumRecyclerViewAdapter(List<Image> items, AlbumFragment.AlbumItemListener listener) {
         this.items = items;
-        mListener = listener;
+        itemsClickListener = listener;
     }
 
     @Override
@@ -36,14 +36,14 @@ public class ImagesAlbumRecyclerViewAdapter extends RecyclerView.Adapter<ImagesA
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = items.get(position);
-        holder.titleView.setText(items.get(position).getAuthor());
-        Picasso.with(context).load(items.get(position).getLink()).placeholder(R.drawable.placeholder).into( holder.imageView );
+        holder.titleView.setText(items.get(position).getDate_taken().split("T")[0]);
+        Picasso.with(context).load(items.get(position).getThumbLink()).placeholder(R.drawable.placeholder).into( holder.imageView );
 
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (null != mListener) {
-                    mListener.inImageClick(holder.mItem);
+                if (null != itemsClickListener) {
+                    itemsClickListener.onImageClick(holder.mItem);
                 }
             }
         });

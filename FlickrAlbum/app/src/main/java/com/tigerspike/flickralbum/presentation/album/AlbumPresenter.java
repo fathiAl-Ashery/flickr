@@ -86,6 +86,6 @@ public class AlbumPresenter implements AlbumContract.Presenter {
 
     @Override
     public void start() {
-        loadAlbum(true);
+        loadAlbum(false);
     }
 }

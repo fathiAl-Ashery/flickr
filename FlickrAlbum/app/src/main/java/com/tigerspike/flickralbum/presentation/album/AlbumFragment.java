@@ -31,7 +31,14 @@ public class AlbumFragment extends Fragment implements AlbumContract.View {
 
     private AlbumContract.Presenter presenter;
     private ImagesAlbumRecyclerViewAdapter albumAdapter;
-    private AlbumItemListener listener;
+    private AlbumItemListener listener = new AlbumItemListener() {
+        @Override
+        public void onImageClick(Image clickedImage) {
+            presenter.openImageDetails(clickedImage);
+        }
+
+
+    };
 
     private ProgressDialog progress;
 
@@ -142,6 +149,6 @@ public class AlbumFragment extends Fragment implements AlbumContract.View {
     }
 
     public interface AlbumItemListener {
-        void inImageClick(Image clickedImage);
+        void onImageClick(Image clickedImage);
     }
 }

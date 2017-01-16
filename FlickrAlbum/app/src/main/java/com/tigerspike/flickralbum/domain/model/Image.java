@@ -11,6 +11,7 @@ public class Image implements Parcelable{
 
     private String title;
     private String link;
+    private String thumbLink;
     private String date_taken;
     private String description;
     private String author;
@@ -44,6 +45,13 @@ public class Image implements Parcelable{
         this.link = link;
     }
 
+    public String getThumbLink() {
+        return thumbLink;
+    }
+
+    public void setThumbLink(String thumbLink) {
+        this.thumbLink = thumbLink;
+    }
     public String getDate_taken() {
         return date_taken;
     }
@@ -77,6 +85,7 @@ public class Image implements Parcelable{
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.title);
         dest.writeString(this.link);
+        dest.writeString(this.thumbLink);
         dest.writeString(this.date_taken);
         dest.writeString(this.description);
         dest.writeString(this.author);
@@ -85,6 +94,7 @@ public class Image implements Parcelable{
     protected Image(Parcel in) {
         this.title = in.readString();
         this.link = in.readString();
+        this.thumbLink = in.readString();
         this.date_taken = in.readString();
         this.description = in.readString();
         this.author = in.readString();
