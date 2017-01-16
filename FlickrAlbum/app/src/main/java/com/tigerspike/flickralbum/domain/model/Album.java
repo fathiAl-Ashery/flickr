@@ -12,7 +12,20 @@ import java.util.List;
 public class Album {
     private String albumTitle;
     private String description;
+
+    public String getTags() {
+        return tags;
+    }
+
+    public void setTags(String tags) {
+        this.tags = tags;
+    }
+
     private String tags;
+
+    public Album(){
+
+    }
 
     public Album(String title, String description, String tags, List<Image> images){
         this.albumTitle = title;

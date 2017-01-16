@@ -12,6 +12,9 @@ public class Image {
     private String description;
     private String author;
 
+    public Image(){
+
+    }
     public Image(String title, String description, String author, String date_taken, String url){
         this.title = title;
         this.description = description;

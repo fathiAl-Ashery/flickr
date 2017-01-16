@@ -1,6 +1,7 @@
 package com.tigerspike.flickralbum.data;
 
 import com.google.common.collect.Lists;
+import com.tigerspike.flickralbum.data.source.remote.flickr.FlickrDataSource;
 import com.tigerspike.flickralbum.domain.model.Album;
 import com.tigerspike.flickralbum.domain.model.Image;
 
@@ -49,6 +50,8 @@ public class AlbumRepositoryTest {
     @Mock
     AlbumDataSource remoteDataSource;
 
+    AlbumDataSource flickrDataSource;
+
     @Mock
     private AlbumDataSource.LoadAlbumCallback getAlbumCallback;
 
@@ -62,6 +65,7 @@ public class AlbumRepositoryTest {
         // inject the mocks in the test the initMocks method needs to be called.
         MockitoAnnotations.initMocks(this);
 
+        flickrDataSource = FlickrDataSource.getInstance();
         // Get a reference to the class under test
         mAlbumRepository = AlbumRepository.getInstance(remoteDataSource);
     }
@@ -118,6 +122,7 @@ public class AlbumRepositoryTest {
 
         verify(getAlbumCallback).onAlbumLoaded(EMPTY_ALBUM);
     }
+
 
     @Test
     public void GetAlbum_CachedData(){
