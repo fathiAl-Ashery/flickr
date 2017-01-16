@@ -1,10 +1,13 @@
 package com.tigerspike.flickralbum.domain.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by admin on 1/16/17.
  */
 
-public class Image {
+public class Image implements Parcelable{
 
     private String title;
     private String link;
@@ -15,6 +18,8 @@ public class Image {
     public Image(){
 
     }
+
+
     public Image(String title, String description, String author, String date_taken, String url){
         this.title = title;
         this.description = description;
@@ -62,4 +67,36 @@ public class Image {
     public void setAuthor(String author) {
         this.author = author;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.title);
+        dest.writeString(this.link);
+        dest.writeString(this.date_taken);
+        dest.writeString(this.description);
+        dest.writeString(this.author);
+    }
+
+    protected Image(Parcel in) {
+        this.title = in.readString();
+        this.link = in.readString();
+        this.date_taken = in.readString();
+        this.description = in.readString();
+        this.author = in.readString();
+    }
+
+    public static final Parcelable.Creator<Image> CREATOR = new Parcelable.Creator<Image>() {
+        public Image createFromParcel(Parcel source) {
+            return new Image(source);
+        }
+
+        public Image[] newArray(int size) {
+            return new Image[size];
+        }
+    };
 }
