@@ -6,7 +6,7 @@ package com.tigerspike.flickralbum.data;
 
 import android.support.annotation.NonNull;
 
-import com.tigerspike.flickralbum.domain.model.Album;
+import com.tigerspike.flickralbum.data.model.Album;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 

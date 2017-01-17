@@ -1,11 +1,11 @@
-package com.tigerspike.flickralbum.domain.Images;
+package com.tigerspike.flickralbum.domain.AlbumUsecases;
 
 import android.support.annotation.NonNull;
 
 import com.tigerspike.flickralbum.data.AlbumDataSource;
 import com.tigerspike.flickralbum.data.AlbumRepository;
+import com.tigerspike.flickralbum.data.model.Album;
 import com.tigerspike.flickralbum.domain.UseCase;
-import com.tigerspike.flickralbum.domain.model.Album;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 

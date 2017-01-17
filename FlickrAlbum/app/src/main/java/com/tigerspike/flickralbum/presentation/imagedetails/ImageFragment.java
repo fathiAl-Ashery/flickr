@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.tigerspike.flickralbum.R;
-import com.tigerspike.flickralbum.domain.model.Image;
+import com.tigerspike.flickralbum.data.model.Image;
 
 /**
  * A simple {@link Fragment} subclass.

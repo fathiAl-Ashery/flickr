@@ -14,8 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tigerspike.flickralbum.R;
-import com.tigerspike.flickralbum.domain.model.Album;
-import com.tigerspike.flickralbum.domain.model.Image;
+import com.tigerspike.flickralbum.data.model.Album;
+import com.tigerspike.flickralbum.data.model.Image;
 import com.tigerspike.flickralbum.presentation.TigerSpikeAlbum;
 import com.tigerspike.flickralbum.presentation.imagedetails.AlbumImageDetailsActivity;
 

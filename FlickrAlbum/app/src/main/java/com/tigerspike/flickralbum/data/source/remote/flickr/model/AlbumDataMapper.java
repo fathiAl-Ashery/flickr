@@ -1,7 +1,7 @@
 package com.tigerspike.flickralbum.data.source.remote.flickr.model;
 
-import com.tigerspike.flickralbum.domain.model.Album;
-import com.tigerspike.flickralbum.domain.model.Image;
+import com.tigerspike.flickralbum.data.model.Album;
+import com.tigerspike.flickralbum.data.model.Image;
 
 import java.util.ArrayList;
 import java.util.Collection;

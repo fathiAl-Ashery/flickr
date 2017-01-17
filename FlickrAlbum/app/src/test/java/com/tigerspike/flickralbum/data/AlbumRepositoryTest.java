@@ -1,9 +1,9 @@
 package com.tigerspike.flickralbum.data;
 
 import com.google.common.collect.Lists;
+import com.tigerspike.flickralbum.data.model.Album;
+import com.tigerspike.flickralbum.data.model.Image;
 import com.tigerspike.flickralbum.data.source.remote.flickr.FlickrDataSource;
-import com.tigerspike.flickralbum.domain.model.Album;
-import com.tigerspike.flickralbum.domain.model.Image;
 
 import org.junit.After;
 import org.junit.Before;

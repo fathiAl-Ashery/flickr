@@ -1,4 +1,4 @@
-package com.tigerspike.flickralbum.domain.model;
+package com.tigerspike.flickralbum.data.model;
 
 
 import java.util.List;

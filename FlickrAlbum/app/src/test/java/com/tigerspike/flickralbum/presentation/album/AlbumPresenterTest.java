@@ -4,10 +4,10 @@ import com.google.common.collect.Lists;
 import com.tigerspike.flickralbum.TestUseCaseScheduler;
 import com.tigerspike.flickralbum.data.AlbumDataSource;
 import com.tigerspike.flickralbum.data.AlbumRepository;
-import com.tigerspike.flickralbum.domain.Images.LoadAlbumUsecase;
+import com.tigerspike.flickralbum.data.model.Album;
+import com.tigerspike.flickralbum.data.model.Image;
+import com.tigerspike.flickralbum.domain.AlbumUsecases.LoadAlbumUsecase;
 import com.tigerspike.flickralbum.domain.UseCaseHandler;
-import com.tigerspike.flickralbum.domain.model.Album;
-import com.tigerspike.flickralbum.domain.model.Image;
 
 import org.junit.Before;
 import org.junit.Test;

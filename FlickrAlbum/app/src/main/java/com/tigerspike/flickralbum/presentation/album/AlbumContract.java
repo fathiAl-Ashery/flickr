@@ -2,8 +2,8 @@ package com.tigerspike.flickralbum.presentation.album;
 
 import android.support.annotation.NonNull;
 
-import com.tigerspike.flickralbum.domain.model.Album;
-import com.tigerspike.flickralbum.domain.model.Image;
+import com.tigerspike.flickralbum.data.model.Album;
+import com.tigerspike.flickralbum.data.model.Image;
 import com.tigerspike.flickralbum.presentation.BasePresenter;
 import com.tigerspike.flickralbum.presentation.BaseView;
 
