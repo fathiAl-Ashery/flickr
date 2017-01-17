@@ -36,6 +36,7 @@ public class AlbumActivity extends AppCompatActivity {
 
     }
 
+
     @VisibleForTesting
     public IdlingResource getCountingIdlingResource() {
         return EspressoIdlingResource.getIdlingResource();

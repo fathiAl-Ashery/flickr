@@ -3,4 +3,8 @@
     <string name="loading_error">Error In Loading Album</string>
     <string name="loading">Loading</string>
     <string name="loading_album">Loading Album</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_title">Search</string>
 </resources>

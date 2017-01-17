@@ -9,4 +9,5 @@
     app:layoutManager="LinearLayoutManager"
     tools:context="com.tigerspike.flickralbum.presentation.album.AlbumFragment"
     tools:listitem="@layout/album_item"
+    android:background="@color/colorScreenBackground"
     />

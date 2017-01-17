@@ -61,7 +61,7 @@ public class AlbumDataMapper {
         Image image = new Image();
         if (flickrItem != null) {
             image.setTitle(flickrItem.getTitle());
-            image.setDescription(flickrItem.getDescription() + ", " + flickrItem.getPublished() + ".");
+            image.setDescription(flickrItem.getDescription() + " [" + flickrItem.getPublished() + "].");
             image.setAuthor(flickrItem.getAuthor());
             image.setDate_taken(flickrItem.getDate_taken());
             image.setThumbLink( flickrItem.getMedia().getUrl());
