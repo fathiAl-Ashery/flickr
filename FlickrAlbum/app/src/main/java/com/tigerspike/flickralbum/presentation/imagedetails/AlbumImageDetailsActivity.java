@@ -10,7 +10,8 @@ public class AlbumImageDetailsActivity extends AppCompatActivity {
 
     public static final String EXTRA_IMAGE = "image";
 
-    ImageDetailContract.Presenter presenter;
+    private ImageDetailContract.Presenter presenter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

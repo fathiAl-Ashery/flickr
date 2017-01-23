@@ -23,7 +23,7 @@ import com.tigerspike.flickralbum.data.model.Image;
  */
 public class ImageFragment extends Fragment implements ImageDetailContract.View{
 
-    ImageDetailContract.Presenter presenter;
+    private ImageDetailContract.Presenter presenter;
     private Image imageItem;
 
     private ImageView image;

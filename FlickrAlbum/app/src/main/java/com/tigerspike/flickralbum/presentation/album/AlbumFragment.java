@@ -16,8 +16,8 @@ import android.view.ViewGroup;
 import com.tigerspike.flickralbum.R;
 import com.tigerspike.flickralbum.data.model.Album;
 import com.tigerspike.flickralbum.data.model.Image;
-import com.tigerspike.flickralbum.presentation.TigerSpikeAlbum;
 import com.tigerspike.flickralbum.presentation.imagedetails.AlbumImageDetailsActivity;
+import com.tigerspike.flickralbum.util.ActivityUtils;
 
 import java.util.ArrayList;
 
@@ -76,7 +76,7 @@ public class AlbumFragment extends Fragment implements AlbumContract.View {
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
         if (metrics.densityDpi >= DisplayMetrics.DENSITY_HIGH ) {
             rowCount = 2;
-        } else if (TigerSpikeAlbum.isTablet(getActivity())) {
+        } else if (ActivityUtils.isTablet(getActivity())) {
             rowCount = 3;
         }
 

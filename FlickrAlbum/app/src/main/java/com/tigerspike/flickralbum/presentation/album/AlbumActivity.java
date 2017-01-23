@@ -12,7 +12,7 @@ import com.tigerspike.flickralbum.util.EspressoIdlingResource;
 
 public class AlbumActivity extends AppCompatActivity {
 
-    AlbumContract.Presenter albumPresenter;
+    private AlbumContract.Presenter albumPresenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
